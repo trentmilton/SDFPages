@@ -13,6 +13,7 @@ SDFPages is a very basic plugin and will never be overly feature rich, howeverif
 
 1. Create an array of pages you want, make sure they each inherit from **SDFPageViewController**
 
+```
   NSMutableArray *pages = [NSMutableArray new];
   
   SDFPageViewController *page1VC = [[SDFPageViewController alloc] initWithNibName:@"Page1View" bundle:nil];
@@ -23,18 +24,25 @@ SDFPages is a very basic plugin and will never be overly feature rich, howeverif
   
   SDFPageViewController *page3VC = [[SDFPageViewController alloc] initWithNibName:@"Page3View" bundle:nil];
   [pages addObject:page3VC];
-  
+``` 
+
 NOTE: It's easiest to create the view controllers in code like above as sometimes when connecting up via NIBs they aren't loaded correctly and errors occur when setup is called.
   
 2. Create a new pages controller and assign the pages, now is the time to customise the controller as needed
 
+```
+  //  self.pagesController is a property on this class
   self.pagesController = [SDFPagesController new];
   // In this example the code is added to a **NSWindowController**
   self.pagesController.contentView = self.window.contentView;
   self.pagesController.pages = pages;
-  
+```
+
 3. Call **setup** somewhere in your code at a time when you know the views will be loaded, i.e. NOT during **init**.
 
+```
+  [self.pagesController setup];
+```
 
 ### Navigation
 
