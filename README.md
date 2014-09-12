@@ -46,7 +46,7 @@ NOTE: It's easiest to create the view controllers in code like above as sometime
 
 ### Navigation
 
-Each **SDFPageViewController** has **IBOutlet**s for **nextPage** and **previousPage**.
+Each **SDFPageViewController** has an **IBOutlet** for **nextPage** and **previousPage**.
 
 
 
