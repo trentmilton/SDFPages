@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class SDFPageController;
+
 typedef enum
 {
     SDFPagesFlowHorizontal=0,
@@ -59,8 +61,16 @@ typedef enum
 
 /**
  *  When called all the pages views will be added to the scrollView and the scroll view will be added to the contentView. This is left up to you to allow freedom in when it's setup and also give you time to set the properties above. This can only be called once, you will need a new instance if you want to call it again.
+ *
+ *  If you want to use addPageAndNavigateTo make sure you only pass in the pages you want to navigate through linearly before you start doing some branching. As this method will go an add all the pages next to each other and the addPageAndNavigateTo will just add it to the end you will have issues if you call addPageAndNavigateTo if you aren't at the end of the passed in pages.
  */
 - (void)setup;
+/**
+ *  This allows some more freedom in the page controller, you can add a page and then navigate directly to it. You should only call this when you are at the end of the previously passed in pages, otherwise odd things can and most likely will happen.
+ *
+ *  @param pageController Page controller to add to the end of the scroll view
+ */
+- (void)addPageAndNavigateTo:(SDFPageController *)pageController;
 - (void)previousPage;
 - (void)nextPage;
 
