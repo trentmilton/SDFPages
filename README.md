@@ -52,8 +52,8 @@ Each **SDFPageViewController** has an **IBOutlet** for **nextPage** and **previo
 
 The following are able to be set before **setup** is called:
 
-- Flow: horizontal / vertical stacked views
-- Direction: which direction will the views be stacked, if **forward** and **horizontal** the views will be stacked from left to right with the left most view being the first page view and the last page view being on the right. The scrolling direction when next page is hit will go left to right. Otherwise if **backward** and **horizontal** the views will be stacked right to left with the first page on the right and the last page on the left. The scrolling will go right to left when next page is hit. The same concepts apply for **vertical** with **forward** being top down and **backward** being bottom up.
-- Animation duration: control the time in seconds the next / previous page animation will take.
+- **Flow**: horizontal / vertical stacked views
+- **Direction**: which direction will the views be stacked, if **forward** and **horizontal** the views will be stacked from left to right with the left most view being the first page view and the last page view being on the right. The scrolling direction when next page is hit will go left to right. Otherwise if **backward** and **horizontal** the views will be stacked right to left with the first page on the right and the last page on the left. The scrolling will go right to left when next page is hit. The same concepts apply for **vertical** with **forward** being top down and **backward** being bottom up.
+- **Animation duration**: control the time in seconds the next / previous page animation will take.
 
 
