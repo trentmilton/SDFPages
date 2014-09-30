@@ -85,7 +85,10 @@
 		NSLog(@"ERROR: you can't call addPageAndNavigateTo if you aren't at the end of the pages passed in");
 		return;
 	}
-
+    
+    // Need to make sure we add this
+    pageController.pagesController = self;
+    
 	// Add the new page
 	NSMutableArray *pages = [self.pages mutableCopy];
 	[pages addObject:pageController];
