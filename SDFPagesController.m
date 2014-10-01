@@ -121,6 +121,14 @@
 	[self changePage:direction];
 }
 
+- (void)reset
+{
+    if (self.currentPage != 0) {
+        [self previousPage];
+        [self performSelector:@selector(previousPage) withObject:nil afterDelay:self.animationDuration];
+    }
+}
+
 #pragma mark - Private
 
 /**

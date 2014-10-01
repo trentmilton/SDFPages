@@ -73,6 +73,9 @@ typedef enum
 - (void)addPageAndNavigateTo:(SDFPageController *)pageController;
 - (void)previousPage;
 - (void)nextPage;
-
+/**
+ *  Navigate to the first page animated.
+ */
+- (void)reset;
 
 @end
