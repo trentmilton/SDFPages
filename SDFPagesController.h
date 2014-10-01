@@ -70,7 +70,7 @@ typedef enum
  *
  *  @param pageController Page controller to add to the end of the scroll view
  */
-- (void)addPageAndNavigateTo:(SDFPageController *)pageController;
+- (void)addPage:(SDFPageController *)pageController navigateTo:(BOOL)navigateTo;
 - (void)previousPage;
 - (void)nextPage;
 /**

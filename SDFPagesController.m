@@ -79,7 +79,7 @@
 	[self.contentView addSubview:self.scrollView];
 }
 
-- (void)addPageAndNavigateTo:(SDFPageController *)pageController
+- (void)addPage:(SDFPageController *)pageController navigateTo:(BOOL)navigateTo
 {
 	if (self.currentPage != self.pages.count - 1) {
 		NSLog(@"ERROR: you can't call addPageAndNavigateTo if you aren't at the end of the pages passed in");
@@ -105,8 +105,9 @@
     cvFrame.size.width = cvFrame.size.width * self.pages.count;
     ((NSView *)self.scrollView.documentView).frame = cvFrame;
     
-    // Now go an animate to it
-    [self nextPage];
+    if (navigateTo) {
+        [self nextPage];
+    }
 }
 
 - (void)previousPage
